@@ -3,6 +3,7 @@ import pygame
 
 def display(control_map):
     gameDisplay = pygame.display.set_mode((800,600))
+
     pygame.display.set_caption('Paw Paw Boogie')
     black = (0, 0, 0)
     blue = (0, 0, 255)
@@ -10,8 +11,8 @@ def display(control_map):
     while True:
 
         for key in iter(control_map.keys()):
-            print(key)
-            if control_map[key]:
+
+            if type(control_map[key]) == tuple:
                 x,y = map_to_grid(key)
                 pygame.draw.rect(gameDisplay, blue, (x * 50, y * 50,  x * 50 + 50 , y * 50 + 50 ))
 

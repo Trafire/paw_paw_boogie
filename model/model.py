@@ -1,18 +1,18 @@
 def map_to_grid(event):
     m = {
-        'BTN_TOP2': (0, 0),
+        'BTN_TOP2': (0, 2),
         'BTN_TRIGGER': (0, 1),
-        'BTN_BASE': (0, 2),
+        'BTN_BASE': (0, 0),
 
-        'BTN_THUMB': (1, 0),
-        'BTN_THUMB2': (1, 2),
+        'BTN_THUMB': (1, 2),
+        'BTN_THUMB2': (1, 0),
 
-        'BTN_PINKIE': (2, 0),
+        'BTN_PINKIE': (2, 2),
         'BTN_TOP': (2, 1),
-        'BTN_BASE2': (2, 2),
+        'BTN_BASE2': (2, 0),
 
         'BTN_BASE3': 'select',
-        'BTN_BASE4': 'select',
+        'BTN_BASE4': 'start',
     }
     if event in m:
         return m[event]
