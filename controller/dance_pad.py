@@ -10,17 +10,13 @@ def get_input():
 
 
 def update_control_map(control_map):
-    def update():
+    while True:
         i = get_input()
         if i:
             control_map[i[0]] = i[1]
-            return True
-        return False
-    while True:
-        if update():
-            print(control_map)
+
+
 
 
 key_map = {'BTN_BASE3': False, 'BTN_TRIGGER': False, 'BTN_BASE': False, 'BTN_THUMB2': False, 'BTN_BASE2': False,
                'BTN_TOP': False, 'BTN_TOP2': False, 'BTN_BASE4': False, 'BTN_THUMB': False, 'BTN_PINKIE': False}
-
