@@ -6,6 +6,9 @@ def get_events():
     for event in events:
         if event.ev_type == 'key':
             print(event.ev_type, event.code, event.state)
+        else:
+            print(event.ev_type, type(event.ev_type))
+
 
 
 while True:
