@@ -8,6 +8,7 @@ def display(control_map):
     blue = (0, 0, 255)
     red = (255, 0, 0)
     for key in control_map:
+        print(key)
         if control_map[key]:
             x,y = map_to_grid(key)
             pygame.draw.rect(gameDisplay, blue, pygame.Rect(x*50,y*50, 50))
