@@ -4,10 +4,10 @@ import inputs
 def get_events():
     events = inputs.get_gamepad()
     for event in events:
-        if event.ev_type == 'key':
-            print(event.ev_type, event.code, event.state)
-        else:
-            print(event.ev_type, type(event.ev_type))
+        if event.ev_type == 'Key':
+            print(event.code, 1==event.state)
+            return (event.code, 1==event.state)
+
 
 
 
