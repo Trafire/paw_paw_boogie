@@ -16,6 +16,8 @@ def display(control_map):
                 data = map_to_grid(key)
                 if type(data) == tuple:
                     x, y = data
+                    x += 325
+                    y += 225
                     if control_map[key]:
                         pygame.draw.rect(gameDisplay, red, (x * 50, y * 50, 50, 50))
                     else:
