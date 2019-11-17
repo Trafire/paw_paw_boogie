@@ -7,7 +7,7 @@ def display(control_map):
     black = (0, 0, 0)
     blue = (0, 0, 255)
     red = (255, 0, 0)
-    for key in control_map:
+    for key in iter(control_map.keys()):
         print(key)
         if control_map[key]:
             x,y = map_to_grid(key)
