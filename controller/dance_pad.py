@@ -17,7 +17,8 @@ def update_control_map(control_map):
             return True
         return False
     while True:
-        update()
+        if update():
+            print(control_map)
 
 
 key_map = {'BTN_BASE3': False, 'BTN_TRIGGER': False, 'BTN_BASE': False, 'BTN_THUMB2': False, 'BTN_BASE2': False,
