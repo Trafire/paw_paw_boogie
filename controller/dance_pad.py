@@ -1,7 +1,7 @@
 import inputs
 
 
-def get_events():
+def get_input():
     events = inputs.get_gamepad()
     for event in events:
         if event.ev_type == 'Key':
@@ -9,7 +9,15 @@ def get_events():
             return (event.code, 1==event.state)
 
 
+def update_control_map(control_map):
+    i = get_input()
+    if i:
+        control_map[i[0]] = [i]
+        return True
+    return False
 
+control_map = {}
 
-while True:
-    get_events()
+while true:
+    if update_control_map(control_map):
+        print(control_map)
