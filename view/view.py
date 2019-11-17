@@ -14,7 +14,7 @@ def display(control_map):
 
             if type(control_map[key]) == tuple:
                 x,y = map_to_grid(key)
-                pygame.draw.rect(gameDisplay, blue, (x * 50, y * 50,  x * 50 + 50 , y * 50 + 50 ))
+                pygame.draw.rect(gameDisplay, blue, (x * 50, y * 50,  50 , 50 ))
 
         pygame.display.update()
 
