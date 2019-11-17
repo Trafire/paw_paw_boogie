@@ -16,13 +16,12 @@ def display(control_map):
                 data = map_to_grid(key)
                 if type(data) == tuple:
                     x, y = data
-                    x_start = 325
-                    y_start = 225
+                    x_start = 0
+                    y_start = 0
                     if control_map[key]:
-                        colour = black
-
-                    else:
                         colour = red
-                    pygame.draw.rect(gameDisplay, colour, (x_start + x * 50, y_start * 50, 50, 50))
+                    else:
+                        colour = black
+                    pygame.draw.rect(gameDisplay, colour, (x_start + (x * 50), y_start * 50, 50, 50))
 
         pygame.display.update()
