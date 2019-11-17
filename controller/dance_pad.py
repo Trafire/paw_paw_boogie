@@ -18,5 +18,4 @@ def update_control_map(control_map):
 
 
 
-key_map = {'BTN_BASE3': False, 'BTN_TRIGGER': False, 'BTN_BASE': False, 'BTN_THUMB2': False, 'BTN_BASE2': False,
-               'BTN_TOP': False, 'BTN_TOP2': False, 'BTN_BASE4': False, 'BTN_THUMB': False, 'BTN_PINKIE': False}
+
