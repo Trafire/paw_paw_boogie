@@ -18,6 +18,6 @@ def update_control_map(control_map):
 
 control_map = {}
 
-while true:
+while True:
     if update_control_map(control_map):
         print(control_map)
