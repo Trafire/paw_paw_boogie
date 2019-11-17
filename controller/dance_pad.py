@@ -16,7 +16,8 @@ def update_control_map(control_map):
         return True
     return False
 
-control_map = {}
+control_map = {'BTN_BASE3': False, 'BTN_TRIGGER': True, 'BTN_BASE': False, 'BTN_THUMB2': False, 'BTN_BASE2': False, 'BTN_TOP': False, 'BTN_TOP2': False, 'BTN_BASE4': False, 'BTN_THUMB': False, 'BTN_PINKIE': False}
+
 
 while True:
     if update_control_map(control_map):
