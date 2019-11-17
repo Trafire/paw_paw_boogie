@@ -1,14 +1,12 @@
-from inputs import get_gamepad, get_key
+import inputs
 
-def main():
-    """Just print out some event infomation when the gamepad is used."""
-    while 1:
-        try:
-            events = get_gamepad()
-            for event in events:
-                print(event.ev_type, event.code, event.state)
-        except:
-            pass
 
-if __name__ == '__main__':
-    main()
+def get_events():
+    events = inputs.get_gamepad()
+    for event in events:
+        if event.ev_type == 'key':
+            print(event.ev_type, event.code, event.state)
+
+
+while True:
+    get_events()
