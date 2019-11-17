@@ -12,7 +12,7 @@ def get_input():
 def update_control_map(control_map):
     i = get_input()
     if i:
-        control_map[i[0]] = [i]
+        control_map[i[0]] = i[1]
         return True
     return False
 
