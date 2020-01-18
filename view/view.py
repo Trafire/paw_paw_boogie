@@ -23,5 +23,7 @@ def display(control_map):
                         #pygame.draw.rect(gameDisplay, color, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
                         Paw(color, sqaure_size)
                     else:
-                        pygame.draw.rect(gameDisplay, black, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
+                        color = (x * 50, y * 50, 0)
+                        Paw(color, sqaure_size)
+                        #pygame.draw.rect(gameDisplay, black, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
         pygame.display.update()
