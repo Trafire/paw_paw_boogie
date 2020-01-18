@@ -20,15 +20,14 @@ def display(control_map):
                     start_x = 50
                     start_y = 50
                     x, y = data
-                    x = x + start_x
-                    y = y + start_y
+
 
                     if control_map[key]:
                         print("DATA:", x, y)
                         color = (x* 50,y * 50, 0)
-                        pygame.draw.rect(gameDisplay, color, (x * 50 + 100, y * 50, 50, 50))
+                        pygame.draw.rect(gameDisplay, color, (x * 50 + start_x, y * 50, 50, 50))
                     else:
-                        pygame.draw.rect(gameDisplay, black, (x * 50 + 100, y * 50, 50, 50))
+                        pygame.draw.rect(gameDisplay, black, (x * 50 + start_x, y * 50, 50, 50))
 
         pygame.display.update()
 
