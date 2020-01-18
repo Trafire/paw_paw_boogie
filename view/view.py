@@ -1,7 +1,7 @@
 from model.model import map_to_grid
 from view import dance_board
 import pygame
-
+from view.paw_print import Paw
 
 def display(control_map):
     gameDisplay = pygame.display.set_mode((800, 600))
@@ -20,7 +20,8 @@ def display(control_map):
                     x, y = data
                     if control_map[key]:
                         color = (x* 50,y * 50, 0)
-                        pygame.draw.rect(gameDisplay, color, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
+                        #pygame.draw.rect(gameDisplay, color, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
+                        Paw(color, sqaure_size)
                     else:
                         pygame.draw.rect(gameDisplay, black, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
         pygame.display.update()
