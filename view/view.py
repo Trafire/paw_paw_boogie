@@ -22,7 +22,8 @@ def display(control_map):
 
                     if control_map[key]:
                         print("DATA:", x, y)
-                        pygame.draw.rect(gameDisplay, (x* 50,y * 50, 0), (x * 50 + 100, y * 50, 50, 50))
+                        color = (x* 50,y * 50, 0)
+                        pygame.draw.rect(gameDisplay, color, (x * 50 + 100, y * 50, 50, 50))
                     else:
                         pygame.draw.rect(gameDisplay, black, (x * 50 + 100, y * 50, 50, 50))
 
