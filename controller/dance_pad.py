@@ -2,7 +2,10 @@ import inputs
 
 
 def get_input():
-    events = inputs.get_gamepad()
+    try:
+        events = inputs.get_gamepad()
+    except inputs.UnpluggedError:
+        return False
     for event in events:
         if event.ev_type == 'Key':
             return (event.code, 1 == event.state)
