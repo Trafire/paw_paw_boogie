@@ -10,7 +10,7 @@ class Paw:
 
         '''
 
-        base_filename = "images/paw_print/pawprint.png"
+        base_filename = "view/images/paw_print/pawprint.png"
         self.image = cv2.imread(base_filename)
         self.change_colour(colour)
         self._get_dimensions()
@@ -21,6 +21,7 @@ class Paw:
 
     def change_colour(self, colour):
         self.colour = colour
+        print(self.image)
         Conv_hsv_Gray = cv2.cvtColor(self.image, cv2.COLOR_RGB2GRAY)
         ret, mask = cv2.threshold(Conv_hsv_Gray, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
         print("Colour: ", colour)
@@ -36,8 +37,8 @@ class Paw:
 
     def get_filename(self, desaturated=False):
         self._get_dimensions()
-        self.filename = f"images/paw_print/colour/paw-{self.colour[0]}-{self.colour[1]}-{self.colour[2]}-{self.height}x{self.width}.jpg"
-        self.filename_desaturated = f"images/paw_print/colour/desaturated_paw-{self.colour[0]}-{self.colour[1]}-{self.colour[2]}-{self.height}x{self.width}.jpg"
+        self.filename = f"view/images/paw_print/colour/paw-{self.colour[0]}-{self.colour[1]}-{self.colour[2]}-{self.height}x{self.width}.jpg"
+        self.filename_desaturated = f"view/images/paw_print/colour/desaturated_paw-{self.colour[0]}-{self.colour[1]}-{self.colour[2]}-{self.height}x{self.width}.jpg"
         return self.filename
 
     def save(self):
