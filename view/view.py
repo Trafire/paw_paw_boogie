@@ -19,15 +19,16 @@ def display(control_map):
                 if type(data) == tuple:
                     start_x = 50
                     start_y = 50
+                    sqaure_size = 100
                     x, y = data
 
 
                     if control_map[key]:
-                        print("DATA:", x, y)
+
                         color = (x* 50,y * 50, 0)
-                        pygame.draw.rect(gameDisplay, color, (x * 50 + start_x, y * 50, 50, 50))
+                        pygame.draw.rect(gameDisplay, color, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
                     else:
-                        pygame.draw.rect(gameDisplay, black, (x * 50 + start_x, y * 50, 50, 50))
+                        pygame.draw.rect(gameDisplay, black, (x * sqaure_size + start_x, y * sqaure_size, sqaure_size, sqaure_size))
 
         pygame.display.update()
 
