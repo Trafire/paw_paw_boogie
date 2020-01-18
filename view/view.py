@@ -4,7 +4,7 @@ import pygame
 
 
 def display(control_map):
-
+    print(control_map)
     gameDisplay = pygame.display.set_mode((800, 600))
     pygame.display.set_caption('Paw Paw Boogie')
     black = (0, 0, 0)
