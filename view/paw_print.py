@@ -37,8 +37,8 @@ class Paw:
 
     def get_filename(self, desaturated=False):
         self._get_dimensions()
-        self.filename = f"view/images/paw_print/colour/paw-{self.colour[0]}-{self.colour[1]}-{self.colour[2]}-{self.height}x{self.width}.jpg"
-        self.filename_desaturated = f"view/images/paw_print/colour/desaturated_paw-{self.colour[0]}-{self.colour[1]}-{self.colour[2]}-{self.height}x{self.width}.jpg"
+        self.filename = "view/images/paw_print/colour/paw-{}-{}-{}-{}x{}.jpg".format(self.colour[0], self.colour[1], self.colour[2], self.height, self.width)
+        self.filename_desaturated = "view/images/paw_print/colour/desaturated_paw-{}-{}-{}-{}x{}.jpg".format(self.colour[0], self.colour[1], self.colour[2], self.height, self.width)
         return self.filename
 
     def save(self):
