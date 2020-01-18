@@ -17,8 +17,11 @@ def display(control_map):
 
                 data = map_to_grid(key)
                 if type(data) == tuple:
+                    start_x = 50
+                    start_y = 50
                     x, y = data
-
+                    x = x + start_x
+                    y = y + start_y
 
                     if control_map[key]:
                         print("DATA:", x, y)
