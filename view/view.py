@@ -15,7 +15,7 @@ def display(control_map):
                 data = map_to_grid(key)
                 if type(data) == tuple:
                     start_x = 50
-                    start_y = 200
+                    start_y = 50
                     sqaure_size = 100
                     x, y = data
                     if control_map[key]:
